@@ -1,0 +1,155 @@
+PROJECT TITLE:
+Customer Lifetime Value Prediction Using Machine Learning
+
+1. PROJECT OVERVIEW
+
+---
+
+This project focuses on predicting Customer Lifetime Value (LTV) using historical transaction data from an online retail business. Customer Lifetime Value represents the total revenue a customer is expected to generate throughout their relationship with a company.
+
+The objective of this project is to help businesses identify high-value customers, optimize marketing strategies, and improve customer retention through data-driven decision making.
+
+2. BUSINESS PROBLEM
+
+---
+
+Organizations often spend large marketing budgets without knowing which customers contribute the most long-term value. Identifying profitable customers manually is difficult when dealing with large transactional datasets.
+
+This project provides an analytical solution to:
+• Identify valuable customers
+• Predict future customer value
+• Enable targeted marketing campaigns
+• Improve overall business profitability
+
+3. DATASET DESCRIPTION
+
+---
+
+The dataset used in this project is the Online Retail Dataset containing transactional sales information.
+
+Key Features:
+• Invoice Number
+• Product Description
+• Quantity Purchased
+• Invoice Date
+• Unit Price
+• Customer ID
+• Country
+
+The dataset represents real-world retail purchasing behavior.
+
+4. DATA PREPROCESSING
+
+---
+
+Data preprocessing steps performed include:
+• Removal of cancelled transactions
+• Filtering invalid quantity and price values
+• Handling missing Customer IDs
+• Conversion of date columns into datetime format
+• Creation of total sales feature
+
+A cleaned dataset was generated and stored as:
+cleaned_data.csv
+
+5. FEATURE ENGINEERING
+
+---
+
+Customer behavioral features were created using the RFM (Recency, Frequency, Monetary) model.
+
+Recency   : Days since last purchase
+Frequency : Number of transactions per customer
+Monetary  : Total spending amount
+
+These features transform transaction-level data into customer-level insights suitable for predictive modeling.
+
+6. MODEL DEVELOPMENT
+
+---
+
+A Random Forest Regression model was used to predict Customer Lifetime Value due to its ability to capture non-linear relationships and handle complex customer purchasing patterns.
+
+Steps performed:
+• Train-test data split
+• Model training using historical customer behavior
+• Prediction of lifetime value for each customer
+• Model persistence using pickle (.pkl file)
+
+7. MODEL EVALUATION
+
+---
+
+Model performance was evaluated using Mean Absolute Error (MAE), which measures prediction accuracy between actual and predicted customer value.
+
+Feature importance analysis was performed to understand key drivers influencing customer lifetime value.
+
+8. CUSTOMER SEGMENTATION
+
+---
+
+Customers were segmented into three categories based on predicted lifetime value:
+
+• High Value Customers
+• Medium Value Customers
+• Low Value Customers
+
+Segmentation enables businesses to design personalized engagement and retention strategies.
+
+9. VISUALIZATION & DASHBOARD
+
+---
+
+Visual analytics were developed to support business understanding, including:
+• Customer Segment Distribution
+• Predicted LTV Distribution
+• Feature Importance Analysis
+• Interactive Business Dashboard
+
+Dashboard previews were included for stakeholder-level interpretation.
+
+10. BUSINESS INSIGHTS
+
+---
+
+Key insights derived from the analysis include:
+• A small percentage of customers contribute a major portion of revenue.
+• High-frequency customers demonstrate stronger lifetime value.
+• Customer spending behavior is the strongest predictor of long-term profitability.
+
+11. BUSINESS RECOMMENDATIONS
+
+---
+
+• Implement loyalty programs for high-value customers.
+• Provide promotional incentives for medium-value customers.
+• Re-engage low-value customers through targeted campaigns.
+• Optimize marketing expenditure using predicted customer value.
+
+12. PROJECT OUTCOME
+
+---
+
+The project successfully demonstrates how machine learning and analytics can be applied to predict customer value and support strategic business decisions.
+
+Final Outputs Generated:
+• Trained Machine Learning Model
+• Customer LTV Prediction Dataset
+• Feature Importance Analysis
+• Business Dashboard
+• Analytical Report
+
+13. FUTURE IMPROVEMENTS
+
+---
+
+• Incorporating demographic customer data
+• Real-time prediction deployment
+• Integration with CRM systems
+• Advanced deep learning models for forecasting
+
+14. CONCLUSION
+
+---
+
+This project showcases an end-to-end data analytics pipeline starting from raw data preprocessing to predictive modeling and business insight generation. The developed solution enables organizations to move toward data-driven customer relationship management and revenue optimization.
